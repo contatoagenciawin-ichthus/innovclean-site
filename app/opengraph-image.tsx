@@ -12,32 +12,45 @@ export default function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          background: "#073c35",
-          color: "#ffffff",
-          padding: "72px 78px",
-          fontFamily: "Arial, sans-serif",
+          background: "#F4F4F2",
+          color: "#004A40",
+          padding: "62px 70px",
+          fontFamily: "Georgia, serif",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 34, fontWeight: 800 }}>
-          <div style={{ width: 24, height: 24, borderRadius: "50% 50% 50% 5px", background: "#00db88", transform: "rotate(-20deg)" }} />
-          InnovClean
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "72%", zIndex: 2 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16, fontFamily: "Arial, sans-serif" }}>
+            <div style={{ display: "flex", gap: 4, width: 58, height: 46 }}>
+              <span style={{ width: 17, height: 38, background: "#BCD8D5", transform: "skewY(20deg)" }} />
+              <span style={{ width: 17, height: 42, background: "#BCD8D5", transform: "translateY(3px) skewY(20deg)" }} />
+              <span style={{ width: 17, height: 46, background: "#004A40", transform: "translateY(6px) skewY(20deg)" }} />
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <strong style={{ fontFamily: "Georgia, serif", fontSize: 32, lineHeight: 1 }}>InnovClean</strong>
+              <span style={{ marginTop: 4, fontSize: 12, letterSpacing: 3 }}>SERVICES LTD</span>
+            </div>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ fontFamily: "Arial, sans-serif", fontSize: 17, letterSpacing: 4, fontWeight: 700, marginBottom: 24 }}>
+              COMMERCIAL CLEANING · LONDON
+            </div>
+            <div style={{ fontSize: 76, lineHeight: 0.93, letterSpacing: -4 }}>
+              Commercial cleaning, shaped around your space.
+            </div>
+          </div>
+
+          <div style={{ fontFamily: "Arial, sans-serif", fontSize: 18, color: "#55716C" }}>
+            Quality · Reliability · Sustainability · Personal service
+          </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", maxWidth: 930 }}>
-          <div style={{ color: "#b1fd40", fontSize: 22, letterSpacing: 4, fontWeight: 800, marginBottom: 28 }}>
-            COMMERCIAL CLEANING · LONDON & UK
-          </div>
-          <div style={{ fontSize: 86, lineHeight: 0.95, letterSpacing: -5, fontWeight: 800 }}>
-            Cleaner spaces. Better days. Less impact.
-          </div>
-        </div>
-
-        <div style={{ display: "flex", justifyContent: "space-between", color: "rgba(255,255,255,.65)", fontSize: 22 }}>
-          <span>Tailored · Sustainable · Reliable</span>
-          <span>innovclean.co.uk</span>
-        </div>
+        <div style={{ position: "absolute", right: 0, top: 0, width: 350, height: 630, background: "#004A40" }} />
+        <div style={{ position: "absolute", right: 245, bottom: 0, width: 120, height: 380, background: "#BCD8D5", transform: "skewY(-14deg)", opacity: .8 }} />
+        <div style={{ position: "absolute", right: 90, bottom: 0, width: 110, height: 470, background: "#00DB88", transform: "skewY(12deg)", opacity: .35 }} />
+        <div style={{ position: "absolute", right: 30, top: 65, width: 16, height: 16, background: "#B1FD40" }} />
       </div>
     ),
     size
