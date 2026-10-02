@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Manrope } from "next/font/google";
+import SiteMotion from "./components/SiteMotion";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en-GB">
       <body className={manrope.variable}>
+        <SiteMotion />
         <header className="site-header">
           <div className="shell header-inner">
             <Link href="/" className="header-brand" aria-label="InnovClean home">
