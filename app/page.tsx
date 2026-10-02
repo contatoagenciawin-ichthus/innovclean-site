@@ -37,7 +37,7 @@ export default function HomePage() {
 
       <section className="hero-v2">
         <div className="shell hero-v2-grid">
-          <div className="hero-v2-copy">
+          <div className="hero-v2-copy" data-reveal>
             <p className="eyebrow">COMMERCIAL CLEANING · LONDON</p>
             <h1>
               Commercial cleaning,
@@ -54,7 +54,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-media">
+          <div className="hero-media" data-reveal>
             <Image
               src="/brand/london-aerial.jpg"
               alt="London commercial district skyline"
@@ -62,8 +62,17 @@ export default function HomePage() {
               priority
               sizes="(max-width: 980px) 100vw, 43vw"
               className="hero-city-image"
+              quality={92}
             />
             <div className="hero-media-grid" aria-hidden="true" />
+            <Image
+              src="/brand/mark-construction-light.png"
+              alt=""
+              width={1920}
+              height={1080}
+              className="hero-construction"
+              aria-hidden="true"
+            />
             <div className="hero-media-card">
               <span>01 / LONDON</span>
               <p>Precision, order and attention to detail — built into every service.</p>
@@ -72,7 +81,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="brand-band">
+      <section className="brand-band" data-reveal>
         <div className="shell brand-band-grid">
           <p>QUALITY</p>
           <p>RELIABILITY</p>
@@ -82,7 +91,7 @@ export default function HomePage() {
       </section>
 
       <section className="section intro-section">
-        <div className="shell editorial-grid">
+        <div className="shell editorial-grid" data-reveal>
           <div>
             <p className="eyebrow">ABOUT INNOVCLEAN</p>
             <h2>Built for modern workplaces. Delivered with a personal touch.</h2>
@@ -101,7 +110,7 @@ export default function HomePage() {
 
       <section className="section services-editorial">
         <div className="shell">
-          <div className="section-heading split-heading">
+          <div className="section-heading split-heading" data-reveal>
             <div>
               <p className="eyebrow eyebrow-on-dark">SERVICES</p>
               <h2>Care for the spaces that keep business moving.</h2>
@@ -113,7 +122,7 @@ export default function HomePage() {
 
           <div className="service-list">
             {services.map(([number, title, text]) => (
-              <article className="service-row" key={number}>
+              <article className="service-row" key={number} data-reveal>
                 <span className="service-number">{number}</span>
                 <h3>{title}</h3>
                 <p>{text}</p>
@@ -122,7 +131,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="services-foot">
+          <div className="services-foot" data-reveal>
             <span>Window cleaning</span>
             <span>Deep cleaning</span>
             <span>Carpet cleaning</span>
@@ -134,13 +143,14 @@ export default function HomePage() {
 
       <section className="section architecture-section">
         <div className="shell architecture-grid">
-          <div className="architecture-art">
+          <div className="architecture-art" data-reveal>
             <Image
               src="/brand/london-skyline.jpg"
               alt="Contemporary London office skyline"
               fill
               sizes="(max-width: 980px) 100vw, 50vw"
               className="architecture-photo"
+              quality={90}
             />
             <div className="architecture-wash" aria-hidden="true" />
             <Image
@@ -154,7 +164,7 @@ export default function HomePage() {
             <div className="arch-caption">LONDON · ORDER · DETAIL · CLARITY</div>
           </div>
 
-          <div className="architecture-copy">
+          <div className="architecture-copy" data-reveal>
             <p className="eyebrow">WHY INNOVCLEAN</p>
             <h2>Professional standards, without losing the human side of service.</h2>
             <p className="section-lead">
@@ -180,9 +190,10 @@ export default function HomePage() {
           fill
           sizes="100vw"
           className="sustainability-image"
+          quality={90}
         />
         <div className="sustainability-shade" aria-hidden="true" />
-        <div className="shell sustainability-content">
+        <div className="shell sustainability-content" data-reveal>
           <p className="eyebrow eyebrow-on-dark">RESPONSIBILITY</p>
           <h2>Cleaner spaces, with less unnecessary impact.</h2>
           <p>
@@ -193,12 +204,12 @@ export default function HomePage() {
 
       <section className="section process-section">
         <div className="shell">
-          <div className="section-heading section-heading-center">
+          <div className="section-heading section-heading-center" data-reveal>
             <p className="eyebrow">HOW IT STARTS</p>
             <h2>A clear plan from the first conversation.</h2>
           </div>
 
-          <div className="process-grid">
+          <div className="process-grid" data-reveal>
             <div>
               <span>01</span>
               <h3>Understand the space</h3>
@@ -220,7 +231,7 @@ export default function HomePage() {
 
       <section className="cta-section">
         <div className="shell">
-          <div className="cta-card">
+          <div className="cta-card" data-reveal>
             <div>
               <p className="eyebrow eyebrow-on-dark">GET IN TOUCH</p>
               <h2>A cleaner workplace starts with the right plan.</h2>
