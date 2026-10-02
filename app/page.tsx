@@ -1,33 +1,17 @@
 import Link from "next/link";
 
 const services = [
-  {
-    number: "01",
-    title: "Daily office cleaning",
-    text: "Customised routines for offices of every size, helping teams and visitors feel comfortable in a consistently well-kept space.",
-  },
-  {
-    number: "02",
-    title: "Housekeeping service",
-    text: "Professional workplace support, from meeting-room readiness to the everyday details that keep an office running smoothly.",
-  },
-  {
-    number: "03",
-    title: "Cleaning & hygiene supplies",
-    text: "Reliable management of cleaning products and essential hygiene supplies, including environmentally considered options.",
-  },
-  {
-    number: "04",
-    title: "Specialist electronics cleaning",
-    text: "Careful cleaning for spaces with high volumes of electronic equipment, helping reduce dust around sensitive technology.",
-  },
+  ["01", "Daily office cleaning", "Flexible office-cleaning routines built around your workplace, team and schedule."],
+  ["02", "Housekeeping service", "Professional workplace support that keeps shared spaces ready, orderly and welcoming."],
+  ["03", "Cleaning & hygiene supplies", "Reliable management of cleaning and hygiene essentials, including environmentally considered options."],
+  ["04", "Specialist electronics cleaning", "Careful cleaning for environments with a high volume of sensitive electronic equipment."],
 ];
 
 const strengths = [
-  ["Tailored", "A cleaning plan built around your property, schedule and priorities."],
-  ["Responsible", "Eco-conscious products and methods are prioritised wherever suitable."],
-  ["Consistent", "Trained teams and local management support reliable day-to-day standards."],
-  ["Responsive", "A customer-centred approach with clear communication and adaptable service."],
+  ["Quality", "Consistent standards and close attention to detail."],
+  ["Reliability", "A service planned around your schedule and workplace."],
+  ["Sustainability", "Responsible products and methods wherever suitable."],
+  ["Personal service", "Clear communication from a family-owned business."],
 ];
 
 export default function HomePage() {
@@ -40,7 +24,7 @@ export default function HomePage() {
     email: "sales@innovclean.co.uk",
     areaServed: ["London", "United Kingdom"],
     description:
-      "Commercial cleaning services focused on tailored solutions, sustainability, quality and customer care.",
+      "Commercial cleaning services focused on quality, reliability, sustainability and customer care.",
   };
 
   return (
@@ -50,114 +34,122 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <section className="hero">
-        <div className="shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow eyebrow-on-dark">COMMERCIAL CLEANING · LONDON & UK</p>
+      <section className="hero-v2">
+        <div className="hero-architecture" aria-hidden="true">
+          <span className="tower tower-a" />
+          <span className="tower tower-b" />
+          <span className="tower tower-c" />
+          <span className="tower tower-d" />
+          <span className="hero-lines" />
+        </div>
+
+        <div className="shell hero-v2-grid">
+          <div className="hero-v2-copy">
+            <p className="eyebrow">COMMERCIAL CLEANING · LONDON</p>
             <h1>
-              Cleaner spaces.<br />
-              Better days.<br />
-              <span>Less impact.</span>
+              Commercial cleaning,
+              <em> shaped around your space.</em>
             </h1>
-            <p className="hero-lead">
-              Tailored commercial cleaning that protects your workplace, supports your people and respects the planet.
+            <p className="hero-v2-lead">
+              Professional cleaning for workplaces that value quality, reliability and environmental responsibility.
             </p>
             <div className="hero-actions">
-              <a className="button button-lime" href="https://wa.me/447759055926" target="_blank" rel="noreferrer">
-                Get a free quote
+              <a className="button button-dark" href="https://wa.me/447759055926" target="_blank" rel="noreferrer">
+                Request a free quote
               </a>
-              <Link className="text-link text-link-light" href="/services">
-                Explore services ↗
-              </Link>
+              <Link className="text-link" href="/services">Explore services ↗</Link>
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="InnovClean service principles">
-            <div className="visual-card">
-              <span className="visual-kicker">INNOVCLEAN</span>
-              <strong>
-                Commercial<br />
-                cleaning,<br />
-                rethought.
-              </strong>
-              <span className="visual-note">Tailored · Sustainable · Reliable</span>
+          <div className="hero-side">
+            <div className="hero-side-label">INNOVCLEAN / 2026</div>
+            <div className="hero-side-message">
+              <span>01</span>
+              <p>Clean spaces should support the people who use them, not interrupt the way they work.</p>
             </div>
-            <div className="visual-pill">Space · Health · Planet</div>
+            <div className="hero-side-footer">
+              <span>Family-owned</span>
+              <span>London & surrounding areas</span>
+            </div>
           </div>
-        </div>
-
-        <div className="shell hero-proof">
-          <span>Family-owned business</span>
-          <span>Flexible scheduling</span>
-          <span>Eco-conscious approach</span>
-          <span>London & surrounding areas</span>
         </div>
       </section>
 
-      <section className="section">
-        <div className="shell intro-grid">
+      <section className="brand-band">
+        <div className="shell brand-band-grid">
+          <p>QUALITY</p>
+          <p>RELIABILITY</p>
+          <p>SUSTAINABILITY</p>
+          <p>PERSONAL SERVICE</p>
+        </div>
+      </section>
+
+      <section className="section intro-section">
+        <div className="shell editorial-grid">
           <div>
-            <p className="eyebrow">HOW WE WORK</p>
-            <h2>Cleaning built around the way your space works.</h2>
+            <p className="eyebrow">ABOUT INNOVCLEAN</p>
+            <h2>Built for modern workplaces. Delivered with a personal touch.</h2>
           </div>
-          <div className="intro-copy">
-            <p>
-              InnovClean is a family-owned commercial cleaning company focused on quality, environmental responsibility and the well-being of the people who use each space.
+          <div className="editorial-copy">
+            <p className="editorial-lead">
+              InnovClean Services is a family-owned commercial cleaning company serving London and surrounding areas.
             </p>
             <p>
-              Rather than forcing every workplace into the same routine, we shape the service around the client: the property, the schedule, the standards and the details that matter.
+              Our approach combines dependable service, environmental responsibility and close attention to the practical needs of each client. Every plan is shaped around the property, frequency and standards required.
             </p>
-            <Link className="text-link" href="/about">More about InnovClean ↗</Link>
+            <Link className="text-link" href="/about">Discover our approach ↗</Link>
           </div>
         </div>
       </section>
 
-      <section className="section section-soft">
+      <section className="section services-editorial">
         <div className="shell">
-          <div className="section-heading">
-            <p className="eyebrow">CORE SERVICES</p>
-            <h2>Professional care for the spaces that keep business moving.</h2>
-            <p className="section-lead">
-              From everyday office cleaning to more specialised workplace support, every service can be adapted to the environment and level of care required.
+          <div className="section-heading split-heading">
+            <div>
+              <p className="eyebrow eyebrow-on-dark">SERVICES</p>
+              <h2>Care for the spaces that keep business moving.</h2>
+            </div>
+            <p>
+              From daily office routines to specialist support, our services can be combined into one practical cleaning plan.
             </p>
           </div>
 
-          <div className="service-grid">
-            {services.map((service) => (
-              <article className="service-card" key={service.number}>
-                <span className="service-number">{service.number}</span>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
+          <div className="service-list">
+            {services.map(([number, title, text]) => (
+              <article className="service-row" key={number}>
+                <span className="service-number">{number}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+                <span className="service-arrow" aria-hidden="true">↗</span>
               </article>
             ))}
           </div>
 
-          <div className="service-strip">
+          <div className="services-foot">
             <span>Window cleaning</span>
             <span>Deep cleaning</span>
             <span>Carpet cleaning</span>
-            <span>Sanitisation services</span>
-          </div>
-
-          <div style={{ marginTop: 38 }}>
-            <Link className="button button-dark" href="/services">View all services</Link>
+            <span>Sanitisation</span>
+            <Link href="/services">View all services ↗</Link>
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="shell philosophy-grid">
-          <div className="philosophy-panel" aria-hidden="true">
-            <div className="philosophy-ring">
-              <span className="philosophy-leaf" />
-            </div>
+      <section className="section architecture-section">
+        <div className="shell architecture-grid">
+          <div className="architecture-art" aria-hidden="true">
+            <div className="arch-block arch-1" />
+            <div className="arch-block arch-2" />
+            <div className="arch-block arch-3" />
+            <div className="arch-block arch-4" />
+            <div className="arch-caption">LONDON · ORDER · DETAIL · CLARITY</div>
           </div>
 
-          <div className="philosophy-copy">
+          <div className="architecture-copy">
             <p className="eyebrow">WHY INNOVCLEAN</p>
-            <h2>More than a clean surface.</h2>
+            <h2>Professional standards, without losing the human side of service.</h2>
             <p className="section-lead">
-              A well-maintained workplace should feel effortless. Behind that feeling is a service that is planned carefully, delivered consistently and adjusted when your needs change.
+              Our identity is rooted in the precision, structure and contemporary urban character of London. The same principles guide how we work: organised, considered and attentive to detail.
             </p>
 
             <div className="strength-list">
@@ -172,31 +164,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-soft">
+      <section className="section process-section">
         <div className="shell">
           <div className="section-heading section-heading-center">
-            <p className="eyebrow">A SIMPLE PROCESS</p>
-            <h2>Clear from the first conversation.</h2>
-            <p className="section-lead">
-              We start with your space and priorities, then build a service plan that can evolve with your business.
-            </p>
+            <p className="eyebrow">HOW IT STARTS</p>
+            <h2>A clear plan from the first conversation.</h2>
           </div>
 
           <div className="process-grid">
             <div>
               <span>01</span>
-              <h3>Tell us what you need</h3>
-              <p>Share your location, type of workplace, schedule and priorities.</p>
+              <h3>Understand the space</h3>
+              <p>We start with your location, type of workplace, schedule and priorities.</p>
             </div>
             <div>
               <span>02</span>
-              <h3>We shape the plan</h3>
-              <p>We define the right services and frequency for your environment.</p>
+              <h3>Shape the service</h3>
+              <p>We define the right combination of services and cleaning frequency.</p>
             </div>
             <div>
               <span>03</span>
-              <h3>We keep standards visible</h3>
-              <p>Ongoing communication helps the service stay aligned with your expectations.</p>
+              <h3>Keep standards aligned</h3>
+              <p>Clear communication helps the service adapt as your needs change.</p>
             </div>
           </div>
         </div>
@@ -206,9 +195,9 @@ export default function HomePage() {
         <div className="shell">
           <div className="cta-card">
             <div>
-              <p className="eyebrow eyebrow-on-dark">LET&apos;S TALK</p>
-              <h2>A cleaner workplace starts with a plan that fits.</h2>
-              <p>Tell us about your space, schedule and priorities. We&apos;ll shape the service around you.</p>
+              <p className="eyebrow eyebrow-on-dark">GET IN TOUCH</p>
+              <h2>A cleaner workplace starts with the right plan.</h2>
+              <p>Tell us about your space and what you need. We&apos;ll take it from there.</p>
             </div>
             <div className="cta-actions">
               <a className="button button-lime" href="https://wa.me/447759055926" target="_blank" rel="noreferrer">
