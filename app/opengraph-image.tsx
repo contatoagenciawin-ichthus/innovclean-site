@@ -15,7 +15,7 @@ export default function Image() {
           background: "#F4F4F2",
           color: "#004A40",
           padding: "62px 70px",
-          fontFamily: "Georgia, serif",
+          fontFamily: "Arial, sans-serif",
           position: "relative",
           overflow: "hidden",
         }}
@@ -28,7 +28,7 @@ export default function Image() {
               <span style={{ width: 17, height: 46, background: "#004A40", transform: "translateY(6px) skewY(20deg)" }} />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <strong style={{ fontFamily: "Georgia, serif", fontSize: 32, lineHeight: 1 }}>InnovClean</strong>
+              <strong style={{ fontFamily: "Arial, sans-serif", fontSize: 32, lineHeight: 1 }}>InnovClean</strong>
               <span style={{ marginTop: 4, fontSize: 12, letterSpacing: 3 }}>SERVICES LTD</span>
             </div>
           </div>
@@ -37,7 +37,7 @@ export default function Image() {
             <div style={{ fontFamily: "Arial, sans-serif", fontSize: 17, letterSpacing: 4, fontWeight: 700, marginBottom: 24 }}>
               COMMERCIAL CLEANING · LONDON
             </div>
-            <div style={{ fontSize: 76, lineHeight: 0.93, letterSpacing: -4 }}>
+            <div style={{ fontSize: 70, lineHeight: 0.98, letterSpacing: -3, fontWeight: 700 }}>
               Commercial cleaning, shaped around your space.
             </div>
           </div>
