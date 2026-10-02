@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Inter } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const display = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["500", "600", "700"],
+});
+
+const body = Manrope({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://innovclean.co.uk"),
@@ -19,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "InnovClean Services",
     title: "InnovClean Services | Commercial Cleaning in London",
     description:
-      "Tailored commercial cleaning that protects your workplace, supports your people and respects the planet.",
+      "Professional commercial cleaning shaped around your workplace, your people and your standards.",
     url: "https://innovclean.co.uk",
   },
 };
@@ -30,23 +41,38 @@ const nav = [
   { href: "/contact", label: "Contact" },
 ];
 
+function Brand({ light = false }: { light?: boolean }) {
+  return (
+    <span className={light ? "brand brand-light" : "brand"}>
+      <span className="brand-geometry" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+      </span>
+      <span className="brand-type">
+        <strong>InnovClean</strong>
+        <small>Services Ltd</small>
+      </span>
+    </span>
+  );
+}
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-GB">
-      <body className={inter.className}>
+      <body className={`${body.variable} ${display.variable}`}>
         <header className="site-header">
           <div className="shell header-inner">
-            <Link className="brand" href="/" aria-label="InnovClean home">
-              <span className="brand-mark" aria-hidden="true" />
-              <span>InnovClean</span>
+            <Link href="/" aria-label="InnovClean home">
+              <Brand />
             </Link>
 
             <nav className="desktop-nav" aria-label="Primary navigation">
               {nav.map((item) => (
                 <Link key={item.href} href={item.href}>{item.label}</Link>
               ))}
-              <a className="button button-small" href="https://wa.me/447759055926" target="_blank" rel="noreferrer">
-                Get a quote
+              <a className="header-cta" href="https://wa.me/447759055926" target="_blank" rel="noreferrer">
+                Request a quote
               </a>
             </nav>
 
@@ -56,7 +82,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 {nav.map((item) => (
                   <Link key={item.href} href={item.href}>{item.label}</Link>
                 ))}
-                <a href="https://wa.me/447759055926" target="_blank" rel="noreferrer">Get a quote</a>
+                <a href="https://wa.me/447759055926" target="_blank" rel="noreferrer">Request a quote</a>
               </div>
             </details>
           </div>
@@ -67,12 +93,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer">
           <div className="shell footer-grid">
             <div>
-              <Link className="brand brand-light" href="/">
-                <span className="brand-mark" aria-hidden="true" />
-                <span>InnovClean</span>
+              <Link href="/">
+                <Brand light />
               </Link>
               <p className="footer-copy">
-                Tailored commercial cleaning with a focus on quality, people and environmental responsibility.
+                Commercial cleaning built around quality, reliability, sustainability and the people who use each space.
               </p>
             </div>
             <div>
@@ -91,7 +116,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
           <div className="shell footer-bottom">
             <span>© {new Date().getFullYear()} InnovClean Services Ltd.</span>
-            <span>Commercial cleaning across London and surrounding areas.</span>
+            <span>London · United Kingdom</span>
           </div>
         </footer>
       </body>
