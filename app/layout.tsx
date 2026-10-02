@@ -42,9 +42,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <div className="shell header-inner">
             <Link href="/" className="header-brand" aria-label="InnovClean home">
               <img
-                src="/brand/logo-para-fundo-claro.png"
+                src="/brand/logo-250x100-para-fundo-claro.png"
                 alt="InnovClean Services Ltd"
                 className="header-logo"
+                width="250"
+                height="100"
               />
             </Link>
 
@@ -76,9 +78,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div>
               <Link href="/" className="footer-brand" aria-label="InnovClean home">
                 <img
-                  src="/brand/logo-para-fundo-escuro.png"
+                  src="/brand/logo-250x100-para-fundo-escuro.png"
                   alt="InnovClean Services Ltd"
                   className="footer-logo"
+                  width="250"
+                  height="100"
                 />
               </Link>
               <p className="footer-copy">
