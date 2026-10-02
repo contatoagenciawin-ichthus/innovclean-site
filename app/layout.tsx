@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
@@ -41,9 +42,9 @@ const nav = [
   { href: "/contact", label: "Contact" },
 ];
 
-function Brand({ light = false }: { light?: boolean }) {
+function Brand() {
   return (
-    <span className={light ? "brand brand-light" : "brand"}>
+    <span className="brand">
       <span className="brand-geometry" aria-hidden="true">
         <i />
         <i />
@@ -93,8 +94,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer">
           <div className="shell footer-grid">
             <div>
-              <Link href="/">
-                <Brand light />
+              <Link href="/" className="footer-brand" aria-label="InnovClean home">
+                <Image
+                  src="/brand/logo-on-dark.png"
+                  alt="InnovClean Services Ltd"
+                  width={520}
+                  height={293}
+                  className="footer-logo"
+                />
               </Link>
               <p className="footer-copy">
                 Commercial cleaning built around quality, reliability, sustainability and the people who use each space.
