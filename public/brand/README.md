@@ -1,20 +1,22 @@
 # InnovClean brand assets
 
-Curated from the approved 2024 InnovClean brand work.
+Curated from the approved InnovClean brand work.
 
 ## Production use
 
+- `logo-para-fundo-claro.png` — official transparent logo for light backgrounds; primary header logo.
+- `logo-para-fundo-escuro.png` — official transparent logo for dark backgrounds; primary footer/dark-section logo.
 - `london-aerial.jpg` — primary London hero photography.
 - `london-skyline.jpg` — secondary urban / architecture photography.
 - `sustainability-forest.jpg` — environmental-responsibility section.
-- `logo-on-dark.png` — official logo treatment for dark backgrounds.
 - `mark-construction-dark.png` — dark-green construction geometry / mark study.
 - `mark-construction-light.png` — light construction geometry / mark study.
 - `brand-banner-dark.png` — dark horizontal brand composition.
 - `brand-banner-light.png` — light horizontal brand composition.
+- `logo-on-dark.png` — earlier dark-background export, retained as legacy reference only.
 
-## Notes
+## Rules
 
-Keep original aspect ratios and avoid redrawing, recolouring or distorting official logo artwork.
+Keep original aspect ratios and do not redraw, recolour or distort official logo artwork.
 
-The separately supplied `green-asset.png` is not currently present in the GitHub branch and can be added later if needed.
+Website typography intentionally uses a sans-serif system throughout. The serif/sans combination remains inside the official logo artwork itself, where it belongs to the identity.
