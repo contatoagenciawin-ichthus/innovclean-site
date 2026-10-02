@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const services = [
@@ -35,14 +36,6 @@ export default function HomePage() {
       />
 
       <section className="hero-v2">
-        <div className="hero-architecture" aria-hidden="true">
-          <span className="tower tower-a" />
-          <span className="tower tower-b" />
-          <span className="tower tower-c" />
-          <span className="tower tower-d" />
-          <span className="hero-lines" />
-        </div>
-
         <div className="shell hero-v2-grid">
           <div className="hero-v2-copy">
             <p className="eyebrow">COMMERCIAL CLEANING · LONDON</p>
@@ -61,15 +54,19 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-side">
-            <div className="hero-side-label">INNOVCLEAN / 2026</div>
-            <div className="hero-side-message">
-              <span>01</span>
-              <p>Clean spaces should support the people who use them, not interrupt the way they work.</p>
-            </div>
-            <div className="hero-side-footer">
-              <span>Family-owned</span>
-              <span>London & surrounding areas</span>
+          <div className="hero-media">
+            <Image
+              src="/brand/london-aerial.jpg"
+              alt="London commercial district skyline"
+              fill
+              priority
+              sizes="(max-width: 980px) 100vw, 43vw"
+              className="hero-city-image"
+            />
+            <div className="hero-media-grid" aria-hidden="true" />
+            <div className="hero-media-card">
+              <span>01 / LONDON</span>
+              <p>Precision, order and attention to detail — built into every service.</p>
             </div>
           </div>
         </div>
@@ -137,11 +134,23 @@ export default function HomePage() {
 
       <section className="section architecture-section">
         <div className="shell architecture-grid">
-          <div className="architecture-art" aria-hidden="true">
-            <div className="arch-block arch-1" />
-            <div className="arch-block arch-2" />
-            <div className="arch-block arch-3" />
-            <div className="arch-block arch-4" />
+          <div className="architecture-art">
+            <Image
+              src="/brand/london-skyline.jpg"
+              alt="Contemporary London office skyline"
+              fill
+              sizes="(max-width: 980px) 100vw, 50vw"
+              className="architecture-photo"
+            />
+            <div className="architecture-wash" aria-hidden="true" />
+            <Image
+              src="/brand/mark-construction-light.png"
+              alt=""
+              width={1920}
+              height={1080}
+              className="construction-overlay"
+              aria-hidden="true"
+            />
             <div className="arch-caption">LONDON · ORDER · DETAIL · CLARITY</div>
           </div>
 
@@ -149,7 +158,7 @@ export default function HomePage() {
             <p className="eyebrow">WHY INNOVCLEAN</p>
             <h2>Professional standards, without losing the human side of service.</h2>
             <p className="section-lead">
-              Our identity is rooted in the precision, structure and contemporary urban character of London. The same principles guide how we work: organised, considered and attentive to detail.
+              The InnovClean identity draws on the precision, structure and contemporary urban character of London. The same principles guide how we work: organised, considered and attentive to detail.
             </p>
 
             <div className="strength-list">
@@ -161,6 +170,24 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="sustainability-band">
+        <Image
+          src="/brand/sustainability-forest.jpg"
+          alt="Green forest representing InnovClean's environmental responsibility"
+          fill
+          sizes="100vw"
+          className="sustainability-image"
+        />
+        <div className="sustainability-shade" aria-hidden="true" />
+        <div className="shell sustainability-content">
+          <p className="eyebrow eyebrow-on-dark">RESPONSIBILITY</p>
+          <h2>Cleaner spaces, with less unnecessary impact.</h2>
+          <p>
+            We prioritise environmentally considered products and methods where they are appropriate, while keeping service quality and the needs of each workplace at the centre.
+          </p>
         </div>
       </section>
 
