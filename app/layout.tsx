@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const display = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-  weight: ["500", "600", "700"],
-});
-
-const body = Manrope({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -42,30 +34,18 @@ const nav = [
   { href: "/contact", label: "Contact" },
 ];
 
-function Brand() {
-  return (
-    <span className="brand">
-      <span className="brand-geometry" aria-hidden="true">
-        <i />
-        <i />
-        <i />
-      </span>
-      <span className="brand-type">
-        <strong>InnovClean</strong>
-        <small>Services Ltd</small>
-      </span>
-    </span>
-  );
-}
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-GB">
-      <body className={`${body.variable} ${display.variable}`}>
+      <body className={manrope.variable}>
         <header className="site-header">
           <div className="shell header-inner">
-            <Link href="/" aria-label="InnovClean home">
-              <Brand />
+            <Link href="/" className="header-brand" aria-label="InnovClean home">
+              <img
+                src="/brand/logo-para-fundo-claro.png"
+                alt="InnovClean Services Ltd"
+                className="header-logo"
+              />
             </Link>
 
             <nav className="desktop-nav" aria-label="Primary navigation">
@@ -95,11 +75,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <div className="shell footer-grid">
             <div>
               <Link href="/" className="footer-brand" aria-label="InnovClean home">
-                <Image
-                  src="/brand/logo-on-dark.png"
+                <img
+                  src="/brand/logo-para-fundo-escuro.png"
                   alt="InnovClean Services Ltd"
-                  width={520}
-                  height={293}
                   className="footer-logo"
                 />
               </Link>
